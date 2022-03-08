@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:clinica_david_ceballos/viewsprincip/login.dart';
+import 'exports/viewsExport.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,6 +13,17 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner:
             false,
         title: 'Clínica Odontológica David',
-        home: Login ());
+       // home: Login (),
+        initialRoute: 'login1',
+
+
+            //para llamar a rutas 
+        routes:{
+          'login1':( BuildContext context)=>  Login(),
+        }
+
+
+       );
+
   }
 }
